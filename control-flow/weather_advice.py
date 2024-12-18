@@ -1,5 +1,5 @@
 #Ask user to choose weather
-weather = input("what's the wether like today? (sunny/rainy/cold):").lower()
+weather = input("What's the weather like today? (sunny/rainy/cold):").lower()
 
 # Provide clothing recommendations based on the weather
 if weather == "sunny":
