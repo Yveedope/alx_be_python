@@ -16,6 +16,8 @@ match priority:
         reminder_message = f"'{task}' is a low priority task"
     case _:
         reminder_message = "Invalid priority level entered."
+        print(reminder_message)  # Print invalid message and exit early
+        exit()  # Exit the program if priority is invalid
 
 # Modify reminder based on time sensitivity
 if time_bound == "yes":
@@ -23,7 +25,6 @@ if time_bound == "yes":
 elif time_bound == "no":
     reminder_message += ". Consider completing it when you have free time."
 else:
-    # Handle unexpected input for time_bound
     reminder_message += " Invalid response for time sensitivity."
 
 # Print the customized reminder
